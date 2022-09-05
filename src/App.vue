@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <h1>My Calculator</h1>
+      <Calculator/>
+      <AnimatedBackground/>    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Calculator from './main/Calculator.vue'
+import AnimatedBackground from './components/AnimatedBackground.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+     components: {Calculator,AnimatedBackground}
+    /* components: {Calculator,AnimatedBackground}       */
+    //components: {AnimatedBackground}      
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url(fonts/RobotoMono-VariableFont_wght.ttf);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'RobotoMono', monospace;
+  color: #fff;
+}
+
+#app {
+    width: 100vw;
+    height:100vh;
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
 </style>
